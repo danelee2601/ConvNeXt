@@ -198,3 +198,16 @@ def convnext_xlarge(pretrained=False, in_22k=False, **kwargs):
         checkpoint = torch.hub.load_state_dict_from_url(url=url, map_location="cpu")
         model.load_state_dict(checkpoint["model"])
     return model
+
+
+if __name__ == '__main__':
+    # toy dataset
+    x = torch.rand((32, 1, 100, 500))  # (B, C, H, W)
+
+    # model
+    model = convnext_tiny(in_chans=1, num_classes=8)
+    print(model)
+
+    # forward
+    out = model(x)
+    print('out.shape:', out.shape)
