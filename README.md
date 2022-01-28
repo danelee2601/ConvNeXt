@@ -1,3 +1,7 @@
+# [Customization]
+
+I modified ConvNet such that it can be used for time series.
+
 # [A ConvNet for the 2020s](https://arxiv.org/abs/2201.03545)
 
 Official PyTorch implementation of **ConvNeXt**, from the following paper:
